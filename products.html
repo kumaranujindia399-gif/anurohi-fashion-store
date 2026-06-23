@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Products - Anurohi Fashion</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="updateCartCount()">
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">ANUROHI FASHION</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </a>
+    </nav>
+
+</header>
+
+<!-- PAGE TITLE -->
+
+<section class="featured">
+
+    <h2>Our Collection</h2>
+
+    <div class="search-box">
+        <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+        onkeyup="searchProducts()">
+    </div>
+
+</section>
+
+<!-- SHOP CONTAINER -->
+
+<div class="shop-container">
+
+    <!-- FILTER SIDEBAR -->
+
+    <aside class="filters">
+
+        <h3>Filters</h3>
+
+        <hr>
+
+        <h4>Categories</h4>
+
+        <label><input type="checkbox"> Co-ord Set</label>
+        <label><input type="checkbox"> Dresses</label>
+        <label><input type="checkbox"> Party Wear</label>
+        <label><input type="checkbox"> Casual Wear</label>
+
+        <hr>
+
+        <h4>Price</h4>
+
+        <label><input type="radio" name="price"> Under ₹1000</label>
+        <label><input type="radio" name="price"> ₹1000 - ₹1500</label>
+        <label><input type="radio" name="price"> ₹1500 - ₹2000</label>
+
+        <hr>
+
+        <h4>Size</h4>
+
+        <label><input type="checkbox"> S</label>
+        <label><input type="checkbox"> M</label>
+        <label><input type="checkbox"> L</label>
+        <label><input type="checkbox"> XL</label>
+
+    </aside>
+
+    <!-- PRODUCT GRID -->
+
+    <section class="products">
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product">
+
+            <span class="badge">HOT</span>
+
+            <div class="image-box">
+                <img src="images/Dress 1.jpg.jpeg">
+            </div>
+
+            <h3>Blue Co-ord Set</h3>
+
+            <p>₹999</p>
+
+            <select class="size-select">
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <div class="product-buttons">
+
+                <a href="https://wa.me/918477075633?text=I want to buy Blue Co-ord Set"
+                target="_blank"
+                class="buy-btn">
+                Buy Now
+                </a>
+
+                <button
+                class="cart-btn"
+                onclick="addToCart('Blue Co-ord Set',999,'images/Dress 1.jpg.jpeg')">
+                Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product">
+
+            <span class="badge sale">SALE</span>
+
+            <div class="image-box">
+                <img src="images/Dress 2.jpg.jpeg">
+            </div>
+
+            <h3>Dress 2</h3>
+
+            <p>₹1199</p>
+
+            <select class="size-select">
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <div class="product-buttons">
+
+                <a href="https://wa.me/918477075633?text=I want to buy Dress 2"
+                target="_blank"
+                class="buy-btn">
+                Buy Now
+                </a>
+
+                <button
+                class="cart-btn"
+                onclick="addToCart('Dress 2',1199,'images/Dress 2.jpg.jpeg')">
+                Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product">
+            <span class="badge">NEW</span>
+
+            <div class="image-box">
+                <img src="images/Dress 3.jpg.jpeg">
+            </div>
+
+            <h3>Dress 3</h3>
+            <p>₹1299</p>
+
+            <select class="size-select">
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <div class="product-buttons">
+                <a href="#" class="buy-btn">Buy Now</a>
+
+                <button class="cart-btn"
+                onclick="addToCart('Dress 3',1299,'images/Dress 3.jpg.jpeg')">
+                Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product">
+            <div class="image-box">
+                <img src="images/Dress 4.jpg.jpeg">
+            </div>
+
+            <h3>Dress 4</h3>
+            <p>₹1399</p>
+
+            <select class="size-select">
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <div class="product-buttons">
+                <a href="#" class="buy-btn">Buy Now</a>
+
+                <button class="cart-btn"
+                onclick="addToCart('Dress 4',1399,'images/Dress 4.jpg.jpeg')">
+                Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product">
+            <div class="image-box">
+                <img src="images/Dress 5.jpg.jpeg">
+            </div>
+
+            <h3>Dress 5</h3>
+            <p>₹1499</p>
+
+            <select class="size-select">
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <div class="product-buttons">
+                <a href="#" class="buy-btn">Buy Now</a>
+
+                <button class="cart-btn"
+                onclick="addToCart('Dress 5',1499,'images/Dress 5.jpg.jpeg')">
+                Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 6 -->
+
+        <div class="product">
+            <div class="image-box">
+                <img src="images/Dress 6.jpg.jpeg">
+            </div>
+
+            <h3>Dress 6</h3>
+            <p>₹1599</p>
+
+            <select class="size-select">
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <div class="product-buttons">
+                <a href="#" class="buy-btn">Buy Now</a>
+
+                <button class="cart-btn"
+                onclick="addToCart('Dress 6',1599,'images/Dress 6.jpg.jpeg')">
+                Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 7 -->
+
+        <div class="product">
+            <div class="image-box">
+                <img src="images/Dress 7.jpg.jpeg">
+            </div>
+
+            <h3>Dress 7</h3>
+            <p>₹1699</p>
+
+            <select class="size-select">
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <div class="product-buttons">
+                <a href="#" class="buy-btn">Buy Now</a>
+
+                <button class="cart-btn"
+                onclick="addToCart('Dress 7',1699,'images/Dress 7.jpg.jpeg')">
+                Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 8 -->
+
+        <div class="product">
+            <div class="image-box">
+                <img src="images/Dress 8.jpg.jpeg">
+            </div>
+
+            <h3>Dress 8</h3>
+            <p>₹1799</p>
+
+            <select class="size-select">
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <div class="product-buttons">
+                <a href="#" class="buy-btn">Buy Now</a>
+
+                <button class="cart-btn"
+                onclick="addToCart('Dress 8',1799,'images/Dress 8.jpg.jpeg')">
+                Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 9 -->
+
+        <div class="product">
+            <div class="image-box">
+                <img src="images/Dress 9.jpg.jpeg">
+            </div>
+
+            <h3>Dress 9</h3>
+            <p>₹1899</p>
+
+            <select class="size-select">
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <div class="product-buttons">
+                <a href="#" class="buy-btn">Buy Now</a>
+
+                <button class="cart-btn"
+                onclick="addToCart('Dress 9',1899,'images/Dress 9.jpg.jpeg')">
+                Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 10 -->
+
+        <div class="product">
+            <span class="badge sale">BESTSELLER</span>
+
+            <div class="image-box">
+                <img src="images/Dress 10.jpg.jpeg">
+            </div>
+
+            <h3>Dress 10</h3>
+            <p>₹1999</p>
+
+            <select class="size-select">
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <div class="product-buttons">
+                <a href="#" class="buy-btn">Buy Now</a>
+
+                <button class="cart-btn"
+                onclick="addToCart('Dress 10',1999,'images/Dress 10.jpg.jpeg')">
+                Add to Cart
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+<!-- STICKY CART -->
+
+<a href="cart.html" class="floating-cart">
+🛒
+<span id="floating-cart-count">0</span>
+</a>
+
+<footer>
+    <p>© 2026 Anurohi Fashion Store</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

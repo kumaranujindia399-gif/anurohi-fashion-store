@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Anurohi Fashion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ANUROHI FASHION</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </a>
+    </nav>
+</header>
+
+<section class="featured">
+    <h2>🛒 Shopping Cart</h2>
+</section>
+
+<div class="cart-page">
+
+    <!-- Left Side -->
+    <div class="cart-left">
+        <div id="cart-items"></div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="cart-summary">
+
+        <h2>Order Summary</h2>
+
+        <hr>
+
+        <div class="summary-row">
+            <span>Total Items</span>
+            <span id="total-items">0</span>
+        </div>
+
+        <div class="summary-row">
+            <span>Total Amount</span>
+            <span id="total-price">₹0</span>
+        </div>
+
+        <hr>
+
+        <h3>Pay via UPI</h3>
+
+       <img src="images/upi-qr.jpeg.jpeg" alt="UPI QR Code" class="upi-qr">
+        <p>
+            <strong>UPI ID:</strong>
+            6396054328@pthdfc
+        </p>
+
+        <a href="upi://pay?pa=6396054328@pthdfc&pn=Anurohi Fashion&cu=INR"
+           class="checkout-btn">
+           Pay with UPI
+        </a>
+
+        <hr>
+
+        <h3>Customer Details</h3>
+
+        <input type="text"
+               id="customerName"
+               placeholder="Full Name">
+
+        <input type="tel"
+               id="customerPhone"
+               placeholder="Mobile Number">
+
+        <textarea id="customerAddress"
+                  placeholder="Delivery Address"></textarea>
+
+        <button class="checkout-btn"
+                onclick="checkoutWhatsApp()">
+            Send Order on WhatsApp
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
